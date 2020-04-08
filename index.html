@@ -21,7 +21,14 @@
 <script language="JavaScript">
 var days = ["maandag","dinsdag","woensdag","donderdag","vrijdag","zaterdag","zondag"]
 var today = new Date()
-document.getElementById("cntdwn").innerHTML = days[today.getDay()-1]
+
+// default version
+tekst = days[today.getDay() - 1]
+
+// special occasions
+if ( today.getMonth() == 3 && today.getDate() == 8 ) { var tekst = "het Jaap's verjaardag!" }
+
+document.getElementById("cntdwn").innerHTML = tekst
 </script>
 
 </body>
